@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Milifix | Unlock the Extraordinary</title>
+  <title>MILIFIX | Unlock the Extraordinary</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
       min-height: 100vh;
       margin: 0;
       background: linear-gradient(135deg, #0a0f1a 0%, #1a223a 100%);
-      overflow: hidden;
+      overflow-x: hidden;
       font-family: 'Montserrat', 'Orbitron', Arial, sans-serif;
+      color: #eee;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
     }
     .stars {
       position: fixed;
@@ -24,33 +25,85 @@
       pointer-events: none;
       z-index: 0;
     }
-    .glass {
+    header {
+      width: 100%;
+      background: rgba(20, 28, 44, 0.85);
+      box-shadow: 0 2px 16px 0 #0004;
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+    }
+    .logo {
+      font-family: 'Orbitron', Arial, sans-serif;
+      font-size: 2em;
+      color: #b6e0fe;
+      letter-spacing: 0.12em;
+      font-weight: bold;
+      text-shadow: 0 0 16px #4ad, 0 0 4px #fff2;
+      padding: 16px 0;
+    }
+    nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      font-size: 1.1em;
+      letter-spacing: 0.04em;
+      padding: 8px 0;
+      position: relative;
+      transition: color 0.2s;
+    }
+    nav a.active, nav a:hover {
+      color: #4ad;
+    }
+    .lang-switch {
+      margin-left: 32px;
+      display: flex;
+      gap: 8px;
+    }
+    .lang-btn {
+      background: none;
+      border: none;
+      color: #b6e0fe;
+      font-size: 1em;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      background: #4ad2;
+      color: #fff;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      padding: 48px 0 32px 0;
+    }
+    .content-glass {
       background: rgba(30, 40, 60, 0.7);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-radius: 24px;
       border: 1.5px solid rgba(255, 255, 255, 0.18);
-      padding: 64px 48px;
-      max-width: 420px;
+      padding: 48px 36px;
+      max-width: 700px;
+      width: 90vw;
       margin: 0 auto;
-      z-index: 1;
       position: relative;
-    }
-    h1 {
-      font-family: 'Orbitron', Arial, sans-serif;
-      font-size: 2.8em;
-      letter-spacing: 0.08em;
-      color: #b6e0fe;
-      margin-bottom: 0.3em;
-      text-shadow: 0 0 24px #4ad, 0 0 8px #fff2;
-    }
-    p.slogan {
-      font-size: 1.3em;
-      color: #fff;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.8em;
-      text-shadow: 0 0 8px #4ad8, 0 0 2px #fff2;
     }
     .glow {
       position: absolute;
@@ -64,19 +117,73 @@
       right: -60px;
       z-index: 0;
     }
-    @media (max-width: 600px) {
-      .glass { padding: 32px 10px; }
-      h1 { font-size: 2em; }
+    h1 {
+      font-family: 'Orbitron', Arial, sans-serif;
+      font-size: 2.2em;
+      letter-spacing: 0.08em;
+      color: #b6e0fe;
+      margin-bottom: 0.3em;
+      text-shadow: 0 0 24px #4ad, 0 0 8px #fff2;
+    }
+    .section-title {
+      font-size: 1.5em;
+      color: #4ad;
+      margin-top: 0.5em;
+      margin-bottom: 0.3em;
+      letter-spacing: 0.06em;
+    }
+    .section-content {
+      font-size: 1.1em;
+      color: #eee;
+      margin-bottom: 1.2em;
+      line-height: 1.7;
+    }
+    footer {
+      width: 100%;
+      background: rgba(20, 28, 44, 0.85);
+      color: #b6e0fe;
+      text-align: center;
+      padding: 18px 0 12px 0;
+      font-size: 1em;
+      letter-spacing: 0.04em;
+      box-shadow: 0 -2px 16px 0 #0004;
+      z-index: 10;
+      position: relative;
+    }
+    @media (max-width: 700px) {
+      .content-glass { padding: 24px 6px; }
+      h1 { font-size: 1.3em; }
+      .section-title { font-size: 1.1em; }
     }
   </style>
 </head>
 <body>
   <canvas class="stars"></canvas>
-  <div class="glass">
-    <div class="glow"></div>
-    <h1>Milifix</h1>
-    <p class="slogan">Unlock the Extraordinary</p>
-  </div>
+  <header>
+    <div class="logo">MILIFIX</div>
+    <nav id="navbar">
+      <a href="#" data-section="tech" class="active">科技</a>
+      <a href="#" data-section="art">藝術＆作品</a>
+      <a href="#" data-section="project">專案</a>
+      <a href="#" data-section="team">人員介紹</a>
+      <a href="#" data-section="story">品牌故事</a>
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="zh-Hant">中</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ja">日</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="content-glass">
+      <div class="glow"></div>
+      <h1 id="main-title">科技</h1>
+      <div id="main-content" class="section-content"></div>
+    </div>
+  </main>
+  <footer>
+    &copy; 2024 MILIFIX 集團 | Unlock the Extraordinary
+  </footer>
   <script>
     // 星空動畫
     const canvas = document.querySelector('.stars');
@@ -109,6 +216,112 @@
     window.addEventListener('resize', resize);
     resize();
     setInterval(draw, 60);
+
+    // 多語內容
+    const contentData = {
+      'tech': {
+        'zh-Hant': {
+          title: '科技',
+          content: 'MILIFIX 致力於前沿科技的探索與創新，涵蓋人工智慧、區塊鏈、神秘運算與未來網路。我們的技術團隊持續突破界限，打造屬於未來的解決方案。'
+        },
+        'en': {
+          title: 'Technology',
+          content: 'MILIFIX is dedicated to exploring and innovating in cutting-edge technology, including AI, blockchain, cryptic computing, and the future of the web. Our tech team constantly pushes boundaries to create solutions for tomorrow.'
+        },
+        'ja': {
+          title: 'テクノロジー',
+          content: 'MILIFIXは最先端技術の探求と革新に取り組み、AI、ブロックチェーン、神秘的なコンピューティング、未来のネットワークを網羅しています。私たちの技術チームは常に限界を超え、未来のソリューションを創造します。'
+        }
+      },
+      'art': {
+        'zh-Hant': {
+          title: '藝術＆作品',
+          content: '我們融合科技與藝術，創作出獨特的數位藝術、裝置作品與跨界展演。每一件作品都蘊含神秘與創意，展現 MILIFIX 的非凡美學。'
+        },
+        'en': {
+          title: 'Art & Works',
+          content: 'We blend technology and art to create unique digital artworks, installations, and cross-disciplinary performances. Each piece embodies mystery and creativity, showcasing MILIFIX's extraordinary aesthetics.'
+        },
+        'ja': {
+          title: 'アート＆作品',
+          content: '私たちはテクノロジーとアートを融合し、独自のデジタルアートやインスタレーション、ジャンルを超えたパフォーマンスを創作します。すべての作品に神秘と創造性が込められています。'
+        }
+      },
+      'project': {
+        'zh-Hant': {
+          title: '專案',
+          content: 'MILIFIX 執行多項神秘且具影響力的專案，從未來城市到虛擬宇宙，皆由我們的團隊策劃與實踐。每個專案都是對未知的探索。'
+        },
+        'en': {
+          title: 'Projects',
+          content: 'MILIFIX runs mysterious and impactful projects, from future cities to virtual universes, all planned and executed by our team. Every project is an exploration of the unknown.'
+        },
+        'ja': {
+          title: 'プロジェクト',
+          content: 'MILIFIXは未来都市からバーチャルユニバースまで、神秘的で影響力のあるプロジェクトを実施しています。すべてのプロジェクトは未知への探求です。'
+        }
+      },
+      'team': {
+        'zh-Hant': {
+          title: '人員介紹',
+          content: '我們的成員來自世界各地，擁有多元背景與專業，組成一支神秘而強大的團隊。每位成員都是 MILIFIX 不可或缺的一部分。'
+        },
+        'en': {
+          title: 'Team',
+          content: 'Our members come from all over the world, with diverse backgrounds and expertise, forming a mysterious and powerful team. Every member is an indispensable part of MILIFIX.'
+        },
+        'ja': {
+          title: 'メンバー紹介',
+          content: '私たちのメンバーは世界中から集まり、多様なバックグラウンドと専門性を持つ、神秘的で強力なチームを形成しています。すべてのメンバーがMILIFIXにとって不可欠な存在です。'
+        }
+      },
+      'story': {
+        'zh-Hant': {
+          title: '品牌故事',
+          content: 'MILIFIX 起源於一個神秘的創意火花，結合科技、藝術與人文精神，致力於開創非凡的未來。這是一段屬於我們的傳奇。'
+        },
+        'en': {
+          title: 'Brand Story',
+          content: 'MILIFIX originated from a mysterious spark of creativity, combining technology, art, and humanity to create an extraordinary future. This is our legend.'
+        },
+        'ja': {
+          title: 'ブランドストーリー',
+          content: 'MILIFIXは神秘的な創造のきらめきから生まれ、テクノロジー、アート、人間性を融合し、非凡な未来を切り開きます。これは私たちの伝説です。'
+        }
+      }
+    };
+    let currentSection = 'tech';
+    let currentLang = 'zh-Hant';
+
+    function updateContent() {
+      const data = contentData[currentSection][currentLang];
+      document.getElementById('main-title').textContent = data.title;
+      document.getElementById('main-content').textContent = data.content;
+      // 導覽欄高亮
+      document.querySelectorAll('nav a').forEach(a => {
+        a.classList.toggle('active', a.dataset.section === currentSection);
+      });
+      // 語言高亮
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === currentLang);
+      });
+      // 設定 html lang
+      document.documentElement.lang = currentLang;
+    }
+    document.querySelectorAll('nav a').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        currentSection = a.dataset.section;
+        updateContent();
+      });
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentLang = btn.dataset.lang;
+        updateContent();
+      });
+    });
+    updateContent();
   </script>
 </body>
 </html>
