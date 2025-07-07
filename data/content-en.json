@@ -1,22 +1,103 @@
 {
   "tech": {
     "title": "Technology",
-    "content": "MILIFIX is dedicated to exploring and innovating in cutting-edge technology, including AI, blockchain, cryptic computing, and the future of the web. Our tech team constantly pushes boundaries to create solutions for tomorrow."
+    "intro": "MILIFIX is dedicated to exploring and innovating in cutting-edge technology, including AI, blockchain, cryptic computing, and the future of the web.",
+    "highlights": [
+      "Artificial Intelligence & Machine Learning",
+      "Blockchain & Decentralized Applications",
+      "Cryptic Computing & Future Networks"
+    ],
+    "projects": [
+      {
+        "name": "Project X",
+        "desc": "Exploring unknown AI fields to build self-evolving systems.",
+        "img": "https://via.placeholder.com/300x180?text=Project+X"
+      },
+      {
+        "name": "Quantum Network",
+        "desc": "Building next-generation quantum communication protocols for ultra-fast secure transmission.",
+        "img": "https://via.placeholder.com/300x180?text=Quantum+Network"
+      }
+    ]
   },
   "art": {
     "title": "Art & Works",
-    "content": "We blend technology and art to create unique digital artworks, installations, and cross-disciplinary performances. Each piece embodies mystery and creativity, showcasing MILIFIX's extraordinary aesthetics."
+    "intro": "We blend technology and art to create unique digital artworks, installations, and cross-disciplinary performances.",
+    "highlights": [
+      "Digital Installation Art",
+      "Interactive Performances",
+      "Cross-disciplinary Creations"
+    ],
+    "works": [
+      {
+        "name": "Portal of Illusion",
+        "desc": "An immersive installation art combining AR technology, inviting audiences to traverse reality and virtuality.",
+        "img": "https://via.placeholder.com/300x180?text=Portal+of+Illusion"
+      },
+      {
+        "name": "Sound and Light",
+        "desc": "A live performance weaving sound and light, showcasing the ultimate fusion of technology and art.",
+        "img": "https://via.placeholder.com/300x180?text=Sound+and+Light"
+      }
+    ]
   },
   "project": {
     "title": "Projects",
-    "content": "MILIFIX runs mysterious and impactful projects, from future cities to virtual universes, all planned and executed by our team. Every project is an exploration of the unknown."
+    "intro": "MILIFIX runs mysterious and impactful projects, from future cities to virtual universes.",
+    "list": [
+      {
+        "name": "Future City Initiative",
+        "desc": "Building smart city ecosystems, integrating AI, IoT, and sustainability.",
+        "img": "https://via.placeholder.com/300x180?text=Future+City"
+      },
+      {
+        "name": "Virtual Universe",
+        "desc": "Developing immersive virtual worlds, connecting reality and digital life.",
+        "img": "https://via.placeholder.com/300x180?text=Virtual+Universe"
+      }
+    ]
   },
   "team": {
     "title": "Team",
-    "content": "Our members come from all over the world, with diverse backgrounds and expertise, forming a mysterious and powerful team. Every member is an indispensable part of MILIFIX."
+    "intro": "Our members come from all over the world, with diverse backgrounds and expertise, forming a mysterious and powerful team.",
+    "members": [
+      {
+        "name": "Dr. LUNA",
+        "role": "Founder / Chief Scientist",
+        "desc": "Expert in AI and cryptic computing, leading the team to explore the unknown.",
+        "img": "https://via.placeholder.com/120x120?text=LUNA"
+      },
+      {
+        "name": "ALEX SHADOW",
+        "role": "Art Director",
+        "desc": "Cross-disciplinary artist, skilled in blending technology and aesthetics.",
+        "img": "https://via.placeholder.com/120x120?text=ALEX"
+      },
+      {
+        "name": "MIRA KAI",
+        "role": "Project Manager",
+        "desc": "Responsible for coordinating large-scale projects and international collaborations.",
+        "img": "https://via.placeholder.com/120x120?text=MIRA"
+      }
+    ]
   },
   "story": {
     "title": "Brand Story",
-    "content": "MILIFIX originated from a mysterious spark of creativity, combining technology, art, and humanity to create an extraordinary future. This is our legend."
+    "intro": "MILIFIX originated from a mysterious spark of creativity, combining technology, art, and humanity to create an extraordinary future.",
+    "timeline": [
+      {
+        "year": "2018",
+        "event": "The mysterious organization MILIFIX was officially founded, gathering pioneers from various fields."
+      },
+      {
+        "year": "2020",
+        "event": "Launched the first cross-disciplinary project combining AI and art, gaining international attention."
+      },
+      {
+        "year": "2023",
+        "event": "Initiated the Virtual Universe project, stepping into a new era of digital future."
+      }
+    ],
+    "vision": "We believe that mystery and innovation are the driving forces of the world. MILIFIX will continue to explore the unknown and create legends for the future."
   }
 } 
