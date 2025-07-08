@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" data-section="story">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MILIFIX | Unlock the Extraordinary</title>
+  <title>MILIFIX | Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       min-height: 100vh;
@@ -157,172 +158,35 @@
     }
   </style>
 </head>
-<body>
+<body data-section="story">
   <canvas class="stars"></canvas>
   <header>
     <div class="logo">MILIFIX</div>
     <nav id="navbar">
-      <a href="#" data-section="tech" class="active">科技</a>
-      <a href="#" data-section="art">藝術＆作品</a>
-      <a href="#" data-section="project">專案</a>
-      <a href="#" data-section="team">人員介紹</a>
-      <a href="#" data-section="story">品牌故事</a>
+      <a href="index.html" data-section="story" class="active">Home</a>
+      <a href="tech.html" data-section="tech">科技</a>
+      <a href="art.html" data-section="art">藝術</a>
+      <a href="project.html" data-section="project">專案</a>
+      <a href="team.html" data-section="team">人員介紹</a>
       <div class="lang-switch">
-        <button class="lang-btn active" data-lang="zh-Hant">中</button>
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ja">日</button>
+        <div class="lang-dropdown">
+          <div class="lang-selected"><span class="globe">🌐</span></div>
+          <div class="lang-list"></div>
+        </div>
       </div>
     </nav>
   </header>
   <main>
     <div class="content-glass">
       <div class="glow"></div>
-      <h1 id="main-title">科技</h1>
+      <h1 id="main-title">品牌故事</h1>
       <div id="main-content" class="section-content"></div>
     </div>
   </main>
   <footer>
     &copy; 2024 MILIFIX 集團 | Unlock the Extraordinary
   </footer>
-  <script>
-    // 星空動畫
-    const canvas = document.querySelector('.stars');
-    const ctx = canvas.getContext('2d');
-    let w, h, stars;
-    function resize() {
-      w = canvas.width = window.innerWidth;
-      h = canvas.height = window.innerHeight;
-      stars = Array.from({length: Math.floor(w * h / 1200)}, () => ({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        r: Math.random() * 1.1 + 0.2,
-        o: Math.random() * 0.5 + 0.5
-      }));
-    }
-    function draw() {
-      ctx.clearRect(0, 0, w, h);
-      for (const s of stars) {
-        ctx.globalAlpha = s.o;
-        ctx.beginPath();
-        ctx.arc(s.x, s.y, s.r, 0, 2 * Math.PI);
-        ctx.fillStyle = '#b6e0fe';
-        ctx.shadowColor = '#4ad';
-        ctx.shadowBlur = 8;
-        ctx.fill();
-      }
-      ctx.globalAlpha = 1;
-      ctx.shadowBlur = 0;
-    }
-    window.addEventListener('resize', resize);
-    resize();
-    setInterval(draw, 60);
-
-    // 多語內容
-    const contentData = {
-      'tech': {
-        'zh-Hant': {
-          title: '科技',
-          content: 'MILIFIX 致力於前沿科技的探索與創新，涵蓋人工智慧、區塊鏈、神秘運算與未來網路。我們的技術團隊持續突破界限，打造屬於未來的解決方案。'
-        },
-        'en': {
-          title: 'Technology',
-          content: 'MILIFIX is dedicated to exploring and innovating in cutting-edge technology, including AI, blockchain, cryptic computing, and the future of the web. Our tech team constantly pushes boundaries to create solutions for tomorrow.'
-        },
-        'ja': {
-          title: 'テクノロジー',
-          content: 'MILIFIXは最先端技術の探求と革新に取り組み、AI、ブロックチェーン、神秘的なコンピューティング、未来のネットワークを網羅しています。私たちの技術チームは常に限界を超え、未来のソリューションを創造します。'
-        }
-      },
-      'art': {
-        'zh-Hant': {
-          title: '藝術＆作品',
-          content: '我們融合科技與藝術，創作出獨特的數位藝術、裝置作品與跨界展演。每一件作品都蘊含神秘與創意，展現 MILIFIX 的非凡美學。'
-        },
-        'en': {
-          title: 'Art & Works',
-          content: 'We blend technology and art to create unique digital artworks, installations, and cross-disciplinary performances. Each piece embodies mystery and creativity, showcasing MILIFIX's extraordinary aesthetics.'
-        },
-        'ja': {
-          title: 'アート＆作品',
-          content: '私たちはテクノロジーとアートを融合し、独自のデジタルアートやインスタレーション、ジャンルを超えたパフォーマンスを創作します。すべての作品に神秘と創造性が込められています。'
-        }
-      },
-      'project': {
-        'zh-Hant': {
-          title: '專案',
-          content: 'MILIFIX 執行多項神秘且具影響力的專案，從未來城市到虛擬宇宙，皆由我們的團隊策劃與實踐。每個專案都是對未知的探索。'
-        },
-        'en': {
-          title: 'Projects',
-          content: 'MILIFIX runs mysterious and impactful projects, from future cities to virtual universes, all planned and executed by our team. Every project is an exploration of the unknown.'
-        },
-        'ja': {
-          title: 'プロジェクト',
-          content: 'MILIFIXは未来都市からバーチャルユニバースまで、神秘的で影響力のあるプロジェクトを実施しています。すべてのプロジェクトは未知への探求です。'
-        }
-      },
-      'team': {
-        'zh-Hant': {
-          title: '人員介紹',
-          content: '我們的成員來自世界各地，擁有多元背景與專業，組成一支神秘而強大的團隊。每位成員都是 MILIFIX 不可或缺的一部分。'
-        },
-        'en': {
-          title: 'Team',
-          content: 'Our members come from all over the world, with diverse backgrounds and expertise, forming a mysterious and powerful team. Every member is an indispensable part of MILIFIX.'
-        },
-        'ja': {
-          title: 'メンバー紹介',
-          content: '私たちのメンバーは世界中から集まり、多様なバックグラウンドと専門性を持つ、神秘的で強力なチームを形成しています。すべてのメンバーがMILIFIXにとって不可欠な存在です。'
-        }
-      },
-      'story': {
-        'zh-Hant': {
-          title: '品牌故事',
-          content: 'MILIFIX 起源於一個神秘的創意火花，結合科技、藝術與人文精神，致力於開創非凡的未來。這是一段屬於我們的傳奇。'
-        },
-        'en': {
-          title: 'Brand Story',
-          content: 'MILIFIX originated from a mysterious spark of creativity, combining technology, art, and humanity to create an extraordinary future. This is our legend.'
-        },
-        'ja': {
-          title: 'ブランドストーリー',
-          content: 'MILIFIXは神秘的な創造のきらめきから生まれ、テクノロジー、アート、人間性を融合し、非凡な未来を切り開きます。これは私たちの伝説です。'
-        }
-      }
-    };
-    let currentSection = 'tech';
-    let currentLang = 'zh-Hant';
-
-    function updateContent() {
-      const data = contentData[currentSection][currentLang];
-      document.getElementById('main-title').textContent = data.title;
-      document.getElementById('main-content').textContent = data.content;
-      // 導覽欄高亮
-      document.querySelectorAll('nav a').forEach(a => {
-        a.classList.toggle('active', a.dataset.section === currentSection);
-      });
-      // 語言高亮
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === currentLang);
-      });
-      // 設定 html lang
-      document.documentElement.lang = currentLang;
-    }
-    document.querySelectorAll('nav a').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        currentSection = a.dataset.section;
-        updateContent();
-      });
-    });
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        currentLang = btn.dataset.lang;
-        updateContent();
-      });
-    });
-    updateContent();
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
 
