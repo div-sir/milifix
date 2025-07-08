@@ -185,22 +185,16 @@
       "intro": "我們的成員來自世界各地，擁有多元背景與專業，組成一支神秘而強大的團隊。",
       "members": [
         {
-          "name": "Dr. LUNA",
-          "role": "創辦人 / 首席科學家",
-          "desc": "專精於人工智慧與神秘運算，帶領團隊探索未知。",
-          "img": "https://via.placeholder.com/120x120?text=LUNA"
+          "name": "Solilium",
+          "role": "創辦人 / 神秘領袖",
+          "desc": "Solilium 擁有跨領域的創新思維，專注於科技與藝術的融合，帶領 MILIFIX 走向未知的未來。",
+          "img": "https://via.placeholder.com/120x120?text=Solilium"
         },
         {
-          "name": "ALEX SHADOW",
-          "role": "藝術總監",
-          "desc": "跨界藝術家，擅長結合科技與美學創作。",
-          "img": "https://via.placeholder.com/120x120?text=ALEX"
-        },
-        {
-          "name": "MIRA KAI",
-          "role": "專案經理",
-          "desc": "負責協調大型專案與國際合作。",
-          "img": "https://via.placeholder.com/120x120?text=MIRA"
+          "name": "Ephoca",
+          "role": "技術總監",
+          "desc": "Ephoca 精通人工智慧與區塊鏈技術，是團隊的技術核心，負責推動前沿專案。",
+          "img": "https://via.placeholder.com/120x120?text=Ephoca"
         }
       ]
     },
@@ -209,22 +203,16 @@
       "intro": "Our members come from all over the world, with diverse backgrounds and expertise, forming a mysterious and powerful team.",
       "members": [
         {
-          "name": "Dr. LUNA",
-          "role": "Founder / Chief Scientist",
-          "desc": "Expert in AI and cryptic computing, leading the team to explore the unknown.",
-          "img": "https://via.placeholder.com/120x120?text=LUNA"
+          "name": "Solilium",
+          "role": "Founder / Mysterious Leader",
+          "desc": "Solilium possesses cross-disciplinary innovative thinking, focusing on the fusion of technology and art, leading MILIFIX into the unknown future.",
+          "img": "https://via.placeholder.com/120x120?text=Solilium"
         },
         {
-          "name": "ALEX SHADOW",
-          "role": "Art Director",
-          "desc": "Cross-disciplinary artist, skilled in blending technology and aesthetics.",
-          "img": "https://via.placeholder.com/120x120?text=ALEX"
-        },
-        {
-          "name": "MIRA KAI",
-          "role": "Project Manager",
-          "desc": "Responsible for coordinating large-scale projects and international collaborations.",
-          "img": "https://via.placeholder.com/120x120?text=MIRA"
+          "name": "Ephoca",
+          "role": "Chief Technology Officer",
+          "desc": "Ephoca is proficient in AI and blockchain technology, serving as the technical core of the team and driving cutting-edge projects.",
+          "img": "https://via.placeholder.com/120x120?text=Ephoca"
         }
       ]
     },
@@ -233,22 +221,16 @@
       "intro": "私たちのメンバーは世界中から集まり、多様なバックグラウンドと専門性を持つ、神秘的で強力なチームを形成しています。",
       "members": [
         {
-          "name": "Dr. LUNA",
-          "role": "創設者 / チーフサイエンティスト",
-          "desc": "AIと神秘的なコンピューティングの専門家。チームを率いて未知を探求。",
-          "img": "https://via.placeholder.com/120x120?text=LUNA"
+          "name": "Solilium",
+          "role": "創設者 / 神秘的リーダー",
+          "desc": "Soliliumは分野横断的な革新的思考を持ち、テクノロジーとアートの融合に注力し、MILIFIXを未知の未来へ導きます。",
+          "img": "https://via.placeholder.com/120x120?text=Solilium"
         },
         {
-          "name": "ALEX SHADOW",
-          "role": "アートディレクター",
-          "desc": "テクノロジーと美学を融合させるクロスジャンルアーティスト。",
-          "img": "https://via.placeholder.com/120x120?text=ALEX"
-        },
-        {
-          "name": "MIRA KAI",
-          "role": "プロジェクトマネージャー",
-          "desc": "大規模プロジェクトと国際協力の調整を担当。",
-          "img": "https://via.placeholder.com/120x120?text=MIRA"
+          "name": "Ephoca",
+          "role": "技術ディレクター",
+          "desc": "EphocaはAIとブロックチェーン技術に精通し、チームの技術的中核として最先端プロジェクトを推進します。",
+          "img": "https://via.placeholder.com/120x120?text=Ephoca"
         }
       ]
     }
