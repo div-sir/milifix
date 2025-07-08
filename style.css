@@ -19,12 +19,13 @@ body {
 }
 header {
   width: 100%;
-  background: rgba(20, 28, 44, 0.85);
+  background: rgba(30, 40, 60, 0.55);
   box-shadow: 0 2px 16px 0 #0004;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(18px) saturate(1.5);
+  -webkit-backdrop-filter: blur(18px) saturate(1.5);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -72,10 +73,15 @@ nav a.active, nav a:hover {
   color: #b6e0fe;
   padding: 6px 18px 6px 12px;
   border-radius: 8px;
-  font-size: 1em;
+  font-size: 1.2em;
   display: flex;
   align-items: center;
   transition: background 0.2s;
+}
+.lang-selected .globe {
+  font-size: 1.3em;
+  margin-right: 6px;
+  color: #b6e0fe;
 }
 .lang-selected:after {
   content: '\25BC';
@@ -98,7 +104,7 @@ nav a.active, nav a:hover {
   pointer-events: none;
   transform: translateY(-10px) scaleY(0.95);
   transition: opacity 0.25s, transform 0.25s;
-  z-index: 100;
+  z-index: 9999;
 }
 .lang-dropdown.open .lang-list {
   opacity: 1;
@@ -192,4 +198,16 @@ footer {
   .content-glass { padding: 24px 6px; }
   h1 { font-size: 1.3em; }
   .section-title { font-size: 1.1em; }
+}
+/* 主要內容 h1 置中 */
+main .content-glass h1 {
+  text-align: center;
+  width: 100%;
+}
+/* 下拉 hover 靈敏度調整 */
+.lang-dropdown {
+  pointer-events: auto;
+}
+.lang-dropdown.open {
+  pointer-events: auto;
 } 

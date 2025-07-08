@@ -82,6 +82,7 @@ function setupNav() {
   const langDropdown = document.querySelector('.lang-dropdown');
   const langSelected = langDropdown.querySelector('.lang-selected');
   const langList = langDropdown.querySelector('.lang-list');
+  let hoverTimeout;
   function renderLangList() {
     langList.innerHTML = '';
     langOrder.forEach(l => {
@@ -98,17 +99,26 @@ function setupNav() {
       langList.appendChild(btn);
     });
   }
+  // 地球SVG
+  const globeSVG = '<span class="globe">🌐</span>';
+  langSelected.innerHTML = globeSVG;
   langSelected.onclick = () => {
     langDropdown.classList.toggle('open');
   };
   langDropdown.onmouseenter = () => {
-    langDropdown.classList.add('open');
+    clearTimeout(hoverTimeout);
+    hoverTimeout = setTimeout(() => {
+      langDropdown.classList.add('open');
+    }, 120);
   };
   langDropdown.onmouseleave = () => {
-    langDropdown.classList.remove('open');
+    clearTimeout(hoverTimeout);
+    hoverTimeout = setTimeout(() => {
+      langDropdown.classList.remove('open');
+    }, 180);
   };
   function updateLang(lang) {
-    langSelected.textContent = langDisplay[lang];
+    langSelected.innerHTML = globeSVG;
     renderLangList();
     document.documentElement.lang = lang;
   }
