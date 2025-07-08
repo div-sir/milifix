@@ -1,0 +1,315 @@
+{
+  "tech": {
+    "zh": {
+      "title": "科技",
+      "intro": "MILIFIX 致力於前沿科技的探索與創新，涵蓋人工智慧、區塊鏈、神秘運算與未來網路。",
+      "highlights": [
+        "人工智慧與機器學習",
+        "區塊鏈與分散式應用",
+        "神秘運算與未來網路"
+      ],
+      "projects": [
+        {
+          "name": "Project X",
+          "desc": "探索未知的AI領域，打造自我進化系統。",
+          "img": "https://via.placeholder.com/300x180?text=Project+X"
+        },
+        {
+          "name": "量子網路",
+          "desc": "建構新世代量子通訊協議，實現超高速安全傳輸。",
+          "img": "https://via.placeholder.com/300x180?text=Quantum+Network"
+        }
+      ]
+    },
+    "en": {
+      "title": "Technology",
+      "intro": "MILIFIX is dedicated to exploring and innovating in cutting-edge technology, including AI, blockchain, cryptic computing, and the future of the web.",
+      "highlights": [
+        "Artificial Intelligence & Machine Learning",
+        "Blockchain & Decentralized Applications",
+        "Cryptic Computing & Future Networks"
+      ],
+      "projects": [
+        {
+          "name": "Project X",
+          "desc": "Exploring unknown AI fields to build self-evolving systems.",
+          "img": "https://via.placeholder.com/300x180?text=Project+X"
+        },
+        {
+          "name": "Quantum Network",
+          "desc": "Building next-generation quantum communication protocols for ultra-fast secure transmission.",
+          "img": "https://via.placeholder.com/300x180?text=Quantum+Network"
+        }
+      ]
+    },
+    "ja": {
+      "title": "テクノロジー",
+      "intro": "MILIFIXは最先端技術の探求と革新に取り組み、AI、ブロックチェーン、神秘的なコンピューティング、未来のネットワークを網羅しています。",
+      "highlights": [
+        "人工知能と機械学習",
+        "ブロックチェーンと分散型アプリケーション",
+        "神秘的なコンピューティングと未来ネットワーク"
+      ],
+      "projects": [
+        {
+          "name": "Project X",
+          "desc": "未知のAI分野を探求し、自己進化型システムを構築。",
+          "img": "https://via.placeholder.com/300x180?text=Project+X"
+        },
+        {
+          "name": "量子ネットワーク",
+          "desc": "次世代量子通信プロトコルを構築し、超高速かつ安全な伝送を実現。",
+          "img": "https://via.placeholder.com/300x180?text=Quantum+Network"
+        }
+      ]
+    }
+  },
+  "art": {
+    "zh": {
+      "title": "藝術＆作品",
+      "intro": "我們融合科技與藝術，創作出獨特的數位藝術、裝置作品與跨界展演。",
+      "highlights": [
+        "數位裝置藝術",
+        "互動展演",
+        "跨界創作"
+      ],
+      "works": [
+        {
+          "name": "幻境之門",
+          "desc": "結合AR技術的沉浸式裝置藝術，邀請觀眾穿越現實與虛擬。",
+          "img": "https://via.placeholder.com/300x180?text=Portal+of+Illusion"
+        },
+        {
+          "name": "聲光流影",
+          "desc": "以聲音與光影交織的現場表演，展現科技與藝術的極致融合。",
+          "img": "https://via.placeholder.com/300x180?text=Sound+and+Light"
+        }
+      ]
+    },
+    "en": {
+      "title": "Art & Works",
+      "intro": "We blend technology and art to create unique digital artworks, installations, and cross-disciplinary performances.",
+      "highlights": [
+        "Digital Installation Art",
+        "Interactive Performances",
+        "Cross-disciplinary Creations"
+      ],
+      "works": [
+        {
+          "name": "Portal of Illusion",
+          "desc": "An immersive installation art combining AR technology, inviting audiences to traverse reality and virtuality.",
+          "img": "https://via.placeholder.com/300x180?text=Portal+of+Illusion"
+        },
+        {
+          "name": "Sound and Light",
+          "desc": "A live performance weaving sound and light, showcasing the ultimate fusion of technology and art.",
+          "img": "https://via.placeholder.com/300x180?text=Sound+and+Light"
+        }
+      ]
+    },
+    "ja": {
+      "title": "アート＆作品",
+      "intro": "私たちはテクノロジーとアートを融合し、独自のデジタルアートやインスタレーション、ジャンルを超えたパフォーマンスを創作します。",
+      "highlights": [
+        "デジタルインスタレーションアート",
+        "インタラクティブパフォーマンス",
+        "クロスジャンル創作"
+      ],
+      "works": [
+        {
+          "name": "幻境の門",
+          "desc": "AR技術を組み合わせた没入型インスタレーションアート。現実と仮想を行き来する体験を提供。",
+          "img": "https://via.placeholder.com/300x180?text=Portal+of+Illusion"
+        },
+        {
+          "name": "音と光の流れ",
+          "desc": "音と光が織りなすライブパフォーマンス。テクノロジーとアートの究極の融合を表現。",
+          "img": "https://via.placeholder.com/300x180?text=Sound+and+Light"
+        }
+      ]
+    }
+  },
+  "project": {
+    "zh": {
+      "title": "專案",
+      "intro": "MILIFIX 執行多項神秘且具影響力的專案，從未來城市到虛擬宇宙。",
+      "list": [
+        {
+          "name": "未來城市計畫",
+          "desc": "打造智慧城市生態，融合AI、IoT與永續發展。",
+          "img": "https://via.placeholder.com/300x180?text=Future+City"
+        },
+        {
+          "name": "虛擬宇宙",
+          "desc": "開發沉浸式虛擬世界，連結現實與數位人生。",
+          "img": "https://via.placeholder.com/300x180?text=Virtual+Universe"
+        }
+      ]
+    },
+    "en": {
+      "title": "Projects",
+      "intro": "MILIFIX runs mysterious and impactful projects, from future cities to virtual universes.",
+      "list": [
+        {
+          "name": "Future City Initiative",
+          "desc": "Building smart city ecosystems, integrating AI, IoT, and sustainability.",
+          "img": "https://via.placeholder.com/300x180?text=Future+City"
+        },
+        {
+          "name": "Virtual Universe",
+          "desc": "Developing immersive virtual worlds, connecting reality and digital life.",
+          "img": "https://via.placeholder.com/300x180?text=Virtual+Universe"
+        }
+      ]
+    },
+    "ja": {
+      "title": "プロジェクト",
+      "intro": "MILIFIXは未来都市からバーチャルユニバースまで、神秘的で影響力のあるプロジェクトを実施しています。",
+      "list": [
+        {
+          "name": "未来都市イニシアティブ",
+          "desc": "AI、IoT、サステナビリティを融合したスマートシティエコシステムを構築。",
+          "img": "https://via.placeholder.com/300x180?text=Future+City"
+        },
+        {
+          "name": "バーチャルユニバース",
+          "desc": "没入型バーチャルワールドを開発し、現実とデジタルライフをつなぐ。",
+          "img": "https://via.placeholder.com/300x180?text=Virtual+Universe"
+        }
+      ]
+    }
+  },
+  "team": {
+    "zh": {
+      "title": "人員介紹",
+      "intro": "我們的成員來自世界各地，擁有多元背景與專業，組成一支神秘而強大的團隊。",
+      "members": [
+        {
+          "name": "Dr. LUNA",
+          "role": "創辦人 / 首席科學家",
+          "desc": "專精於人工智慧與神秘運算，帶領團隊探索未知。",
+          "img": "https://via.placeholder.com/120x120?text=LUNA"
+        },
+        {
+          "name": "ALEX SHADOW",
+          "role": "藝術總監",
+          "desc": "跨界藝術家，擅長結合科技與美學創作。",
+          "img": "https://via.placeholder.com/120x120?text=ALEX"
+        },
+        {
+          "name": "MIRA KAI",
+          "role": "專案經理",
+          "desc": "負責協調大型專案與國際合作。",
+          "img": "https://via.placeholder.com/120x120?text=MIRA"
+        }
+      ]
+    },
+    "en": {
+      "title": "Team",
+      "intro": "Our members come from all over the world, with diverse backgrounds and expertise, forming a mysterious and powerful team.",
+      "members": [
+        {
+          "name": "Dr. LUNA",
+          "role": "Founder / Chief Scientist",
+          "desc": "Expert in AI and cryptic computing, leading the team to explore the unknown.",
+          "img": "https://via.placeholder.com/120x120?text=LUNA"
+        },
+        {
+          "name": "ALEX SHADOW",
+          "role": "Art Director",
+          "desc": "Cross-disciplinary artist, skilled in blending technology and aesthetics.",
+          "img": "https://via.placeholder.com/120x120?text=ALEX"
+        },
+        {
+          "name": "MIRA KAI",
+          "role": "Project Manager",
+          "desc": "Responsible for coordinating large-scale projects and international collaborations.",
+          "img": "https://via.placeholder.com/120x120?text=MIRA"
+        }
+      ]
+    },
+    "ja": {
+      "title": "メンバー紹介",
+      "intro": "私たちのメンバーは世界中から集まり、多様なバックグラウンドと専門性を持つ、神秘的で強力なチームを形成しています。",
+      "members": [
+        {
+          "name": "Dr. LUNA",
+          "role": "創設者 / チーフサイエンティスト",
+          "desc": "AIと神秘的なコンピューティングの専門家。チームを率いて未知を探求。",
+          "img": "https://via.placeholder.com/120x120?text=LUNA"
+        },
+        {
+          "name": "ALEX SHADOW",
+          "role": "アートディレクター",
+          "desc": "テクノロジーと美学を融合させるクロスジャンルアーティスト。",
+          "img": "https://via.placeholder.com/120x120?text=ALEX"
+        },
+        {
+          "name": "MIRA KAI",
+          "role": "プロジェクトマネージャー",
+          "desc": "大規模プロジェクトと国際協力の調整を担当。",
+          "img": "https://via.placeholder.com/120x120?text=MIRA"
+        }
+      ]
+    }
+  },
+  "story": {
+    "zh": {
+      "title": "品牌故事",
+      "intro": "MILIFIX 起源於一個神秘的創意火花，結合科技、藝術與人文精神，致力於開創非凡的未來。",
+      "timeline": [
+        {
+          "year": "2018",
+          "event": "神秘組織 MILIFIX 正式成立，聚集來自各領域的先驅。"
+        },
+        {
+          "year": "2020",
+          "event": "推出首個結合AI與藝術的跨界專案，獲得國際矚目。"
+        },
+        {
+          "year": "2023",
+          "event": "啟動虛擬宇宙計畫，邁向數位未來新紀元。"
+        }
+      ],
+      "vision": "我們相信，神秘與創新是推動世界前進的力量。MILIFIX 將持續探索未知，創造屬於未來的傳奇。"
+    },
+    "en": {
+      "title": "Brand Story",
+      "intro": "MILIFIX originated from a mysterious spark of creativity, combining technology, art, and humanity to create an extraordinary future.",
+      "timeline": [
+        {
+          "year": "2018",
+          "event": "The mysterious organization MILIFIX was officially founded, gathering pioneers from various fields."
+        },
+        {
+          "year": "2020",
+          "event": "Launched the first cross-disciplinary project combining AI and art, gaining international attention."
+        },
+        {
+          "year": "2023",
+          "event": "Initiated the Virtual Universe project, stepping into a new era of digital future."
+        }
+      ],
+      "vision": "We believe that mystery and innovation are the driving forces of the world. MILIFIX will continue to explore the unknown and create legends for the future."
+    },
+    "ja": {
+      "title": "ブランドストーリー",
+      "intro": "MILIFIXは神秘的な創造のきらめきから生まれ、テクノロジー、アート、人間性を融合し、非凡な未来を切り開きます。",
+      "timeline": [
+        {
+          "year": "2018",
+          "event": "神秘的な組織MILIFIXが正式に設立され、各分野の先駆者が集結。"
+        },
+        {
+          "year": "2020",
+          "event": "AIとアートを融合した初のクロスジャンルプロジェクトを発表し、国際的な注目を集める。"
+        },
+        {
+          "year": "2023",
+          "event": "バーチャルユニバース計画を始動し、デジタル未来の新時代へ。"
+        }
+      ],
+      "vision": "神秘と革新こそが世界を動かす力であると信じています。MILIFIXは未知を探求し、未来の伝説を創造し続けます。"
+    }
+  }
+} 

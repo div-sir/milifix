@@ -41,14 +41,15 @@ const langMap = {
 };
 async function loadContent(section, lang) {
   const fileLang = langMap[lang] || 'en';
-  const res = await fetch(`data/content-${fileLang}.json`);
+  const res = await fetch('data/content.json');
   const data = await res.json();
-  document.getElementById('main-title').textContent = data[section].title;
+  const sectionData = data[section][fileLang];
+  document.getElementById('main-title').textContent = sectionData.title;
   // 內容渲染（僅顯示 intro，進階可擴充）
-  if (data[section].intro) {
-    document.getElementById('main-content').textContent = data[section].intro;
-  } else if (data[section].content) {
-    document.getElementById('main-content').textContent = data[section].content;
+  if (sectionData.intro) {
+    document.getElementById('main-content').textContent = sectionData.intro;
+  } else if (sectionData.content) {
+    document.getElementById('main-content').textContent = sectionData.content;
   } else {
     document.getElementById('main-content').textContent = '';
   }
