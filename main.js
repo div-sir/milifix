@@ -39,6 +39,18 @@ const langMap = {
   'en': 'en',
   'ja': 'ja'
 };
+const langDisplay = {
+  'zh-Hant': '中文',
+  'en': 'English',
+  'ja': '日本語'
+};
+const langReverse = {
+  'zh': 'zh-Hant',
+  'en': 'en',
+  'ja': 'ja'
+};
+const langOrder = ['zh-Hant', 'en', 'ja'];
+
 async function loadContent(section, lang) {
   const fileLang = langMap[lang] || 'en';
   const res = await fetch('data/content.json');
@@ -66,27 +78,44 @@ function setupNav() {
       loadContent(currentSection, currentLang);
     });
   });
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      currentLang = btn.dataset.lang;
-      updateLang(currentLang);
-      loadContent(currentSection, currentLang);
-    });
-  });
-  function updateNav(section) {
-    document.querySelectorAll('nav a').forEach(a => {
-      a.classList.toggle('active', a.dataset.section === section);
+  // 語言下拉選單
+  const langDropdown = document.querySelector('.lang-dropdown');
+  const langSelected = langDropdown.querySelector('.lang-selected');
+  const langList = langDropdown.querySelector('.lang-list');
+  function renderLangList() {
+    langList.innerHTML = '';
+    langOrder.forEach(l => {
+      const btn = document.createElement('button');
+      btn.className = 'lang-option' + (l === currentLang ? ' active' : '');
+      btn.textContent = langDisplay[l];
+      btn.dataset.lang = l;
+      btn.onclick = () => {
+        currentLang = l;
+        updateLang(currentLang);
+        loadContent(currentSection, currentLang);
+        langDropdown.classList.remove('open');
+      };
+      langList.appendChild(btn);
     });
   }
+  langSelected.onclick = () => {
+    langDropdown.classList.toggle('open');
+  };
+  langDropdown.onmouseenter = () => {
+    langDropdown.classList.add('open');
+  };
+  langDropdown.onmouseleave = () => {
+    langDropdown.classList.remove('open');
+  };
   function updateLang(lang) {
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
+    langSelected.textContent = langDisplay[lang];
+    renderLangList();
     document.documentElement.lang = lang;
   }
+  updateLang(currentLang);
+  renderLangList();
   // 頁面初始內容
   updateNav(currentSection);
-  updateLang(currentLang);
   loadContent(currentSection, currentLang);
 }
 
