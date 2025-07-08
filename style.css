@@ -195,9 +195,9 @@ footer {
   position: relative;
 }
 @media (max-width: 700px) {
-  .content-glass { padding: 24px 6px; }
-  h1 { font-size: 1.3em; }
-  .section-title { font-size: 1.1em; }
+  .content-glass { padding: 16px 2px; }
+  h1 { font-size: 1.1em; }
+  .section-title { font-size: 1em; }
 }
 /* 主要內容 h1 置中 */
 main .content-glass h1 {
@@ -210,4 +210,18 @@ main .content-glass h1 {
 }
 .lang-dropdown.open {
   pointer-events: auto;
+}
+:focus {
+  outline: 2px solid #4ad;
+  outline-offset: 2px;
+}
+nav a, .lang-option, button {
+  transition: background 0.2s, color 0.2s, outline 0.2s;
+}
+nav a:focus, .lang-option:focus, button:focus {
+  background: #4ad2;
+  color: #fff;
+}
+.section-content {
+  color: #f3f6fa;
 } 

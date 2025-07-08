@@ -18,7 +18,7 @@ const langDisplay = {
 };
 const langOrder = ['zh-Hant', 'en', 'ja'];
 
-// 卡片渲染通用函數
+// 卡片渲染通用函數（圖片 lazy loading）
 function renderCardList(list, type) {
   const cardWrap = document.createElement('div');
   cardWrap.style.display = 'flex';
@@ -40,6 +40,7 @@ function renderCardList(list, type) {
       const img = document.createElement('img');
       img.src = item.img;
       img.alt = item.name;
+      img.loading = 'lazy';
       img.style.width = type === 'member' ? '80px' : '100%';
       img.style.height = type === 'member' ? '80px' : '';
       img.style.borderRadius = type === 'member' ? '50%' : '8px';
@@ -134,9 +135,16 @@ function renderContent(section, sectionData) {
   if (sectionData.vision) mainContent.appendChild(renderVision(sectionData.vision));
 }
 
+// loading 狀態
+function showLoading() {
+  const mainContent = document.getElementById('main-content');
+  if (mainContent) mainContent.innerHTML = '<div style="color:#4ad">Loading...</div>';
+}
+
 // 內容載入（含錯誤處理）
 async function loadContent(section, lang) {
   const fileLang = langMap[lang] || 'en';
+  showLoading();
   try {
     const res = await fetch('data/content.json');
     const data = await res.json();
@@ -153,6 +161,7 @@ async function loadContent(section, lang) {
 function setupNav() {
   const navLinks = document.querySelectorAll('nav a[data-section]');
   navLinks.forEach(a => {
+    a.setAttribute('aria-label', a.textContent);
     a.addEventListener('click', e => {
       e.preventDefault();
       state.currentSection = a.dataset.section;
@@ -221,6 +230,23 @@ function updateNav(section) {
       a.classList.remove('active');
     }
   });
+}
+
+// favicon fallback
+(function(){
+  if (!document.querySelector('link[rel="icon"]')) {
+    var link = document.createElement('link');
+    link.rel = 'icon';
+    link.href = '/favicon.ico';
+    document.head.appendChild(link);
+  }
+})();
+
+// 404 導向
+if (window.location.pathname.endsWith('404.html')) {
+  document.title = '404 Not Found | MILIFIX';
+  document.getElementById('main-title').textContent = '找不到頁面';
+  document.getElementById('main-content').innerHTML = '<div style="color:#f66">您所尋找的頁面不存在。</div>';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
