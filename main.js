@@ -34,11 +34,24 @@ function initStars() {
 }
 
 // 語言切換與內容載入
+const langMap = {
+  'zh-Hant': 'zh',
+  'en': 'en',
+  'ja': 'ja'
+};
 async function loadContent(section, lang) {
-  const res = await fetch(`data/content-${lang}.json`);
+  const fileLang = langMap[lang] || 'en';
+  const res = await fetch(`data/content-${fileLang}.json`);
   const data = await res.json();
   document.getElementById('main-title').textContent = data[section].title;
-  document.getElementById('main-content').textContent = data[section].content;
+  // 內容渲染（僅顯示 intro，進階可擴充）
+  if (data[section].intro) {
+    document.getElementById('main-content').textContent = data[section].intro;
+  } else if (data[section].content) {
+    document.getElementById('main-content').textContent = data[section].content;
+  } else {
+    document.getElementById('main-content').textContent = '';
+  }
 }
 
 function setupNav() {
